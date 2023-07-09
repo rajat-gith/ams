@@ -1,0 +1,66 @@
+﻿
+@model IEnumerable<Attendance_Management_System.Models.LocalModel>
+
+@{
+    ViewBag.Title = "ReportAPage";
+
+}
+
+<html>
+<head>
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Site.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <table class="table">
+        <tr class="tittle_row">
+            <th>
+                @Html.DisplayNameFor(model => model.EMP_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMP_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ATTEND_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOCAL_INTIME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOCAL_OUTTIME)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMP_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMP_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ATTEND_DATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LOCAL_INTIME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LOCAL_OUTTIME)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</body>
+
+
+</html>
+
+
